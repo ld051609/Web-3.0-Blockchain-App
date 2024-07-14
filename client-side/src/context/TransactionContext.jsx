@@ -68,12 +68,26 @@ export const TransactionProvider = ({ children }) => {
         }
     }
 
+    const connectWallet = async () => {
+        try {
+            if (!ethereum) {
+                return alert('Please install MetaMask!');
+            }
+            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+            setCurrentAccount(accounts[0]);
+            getAllTransactions();
+        } catch (error) {
+            console.error(error);
+            throw new Error('Error connecting wallet');
+        }
+    }
+
     useEffect(() => {
         checkIfWalletIsConnected();
     }, []);
 
     return (
-        <TransactionContext.Provider value={{ currentAccount, formData, setFormData, handleChange, transactions }}>
+        <TransactionContext.Provider value={{ currentAccount, formData, setFormData, handleChange, transactions, connectWallet }}>
             {children}
         </TransactionContext.Provider>
     );

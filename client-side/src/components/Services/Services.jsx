@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styles from './Services.module.css';
 import { TransactionContext } from '../../context/TransactionContext';
-
+import { shortenAddress } from '../../utils/shortenAddress';
 const Services = () => {
   const { transactions } = useContext(TransactionContext);
 
@@ -11,8 +11,8 @@ const Services = () => {
       <ul className={styles.transactionList}>
         {transactions.map((transaction, index) => (
           <li key={index} className={styles.transactionItem}>
-            <p><strong>Address To:</strong> {transaction.addressTo}</p>
-            <p><strong>Address From:</strong> {transaction.addressFrom}</p>
+            <p><strong>Address To:</strong> {shortenAddress(transaction.addressTo)}</p>
+            <p><strong>Address From:</strong> {shortenAddress(transaction.addressFrom)}</p>
             <p><strong>Timestamp:</strong> {transaction.timestamp}</p>
             <p><strong>Message:</strong> {transaction.message}</p>
             <p><strong>Keyword:</strong> {transaction.keyword}</p>
