@@ -1,12 +1,15 @@
 import React from 'react'
-import {Button} from './components/index'
+import {Navbar, Services, Send} from './components/index'
+
 const App = () => {
   return (
     <div>
-      <Button />
-      
+
+
+      <Navbar/>
+
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

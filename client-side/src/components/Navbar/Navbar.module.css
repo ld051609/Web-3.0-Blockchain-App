@@ -1,0 +1,87 @@
+/* Navbar.module.css */
+
+.container {
+    background: linear-gradient(135deg, #1c1a56, #3b82f6); /* Hysterical blue gradient */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white
+  }
+  
+ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+  
+li {
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bolder;
+}
+  
+li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.intro{
+    margin: 100px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+img{
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.textIntroHeading{
+    max-width: 80%;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.textIntro p {
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 80%;
+    text-align: justify;
+}
+.walletBtn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #7976d8, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 0;
+    font-weight: bolder;
+    transition: background 0.3s, transform 0.3s;
+
+
+}
+.walletBtn:hover {
+    background: linear-gradient(135deg, #3b82f6, #7976d8);
+    scale: 1.1; 
+}
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+
+}

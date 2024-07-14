@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+
+}
+
+.sendHeading {
+    font-size: 3rem;
+    color: #1c1a56;
+    margin-bottom: 20px;
+}
+.bulletPoints{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 20px 20px; 
+    align-items: center;
+}
+.bulletPoints li{
+    color: #505979;
+    font-size:16px;
+    row-gap: 10px;
+    text-align: center;
+
+
+}
+.bulletPoints li:hover {
+    background-color: rgba(59, 130, 246, 0.1); /* Light blue background */
+    color: #3b82f6; /* Blue text */
+}
+  
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #1c1a56, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #3b82f6, #1c1a56);
+}
