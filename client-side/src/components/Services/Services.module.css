@@ -44,4 +44,54 @@
 .transactionItem p strong {
   color: #cbdbf4; 
 }
-  
+@media (max-width: 1200px) {
+  .transactionList {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .transactionItem {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .servicesHeading {
+      font-size: 2rem;
+  }
+
+  .transactionList {
+      gap: 15px;
+  }
+
+  .transactionItem {
+      width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesHeading {
+      font-size: 1.5rem;
+  }
+
+  .transactionList {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .transactionItem {
+      width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .servicesHeading {
+      font-size: 1.2rem;
+  }
+
+  .transactionItem {
+      width: 100%;
+      padding: 10px;
+  }
+}

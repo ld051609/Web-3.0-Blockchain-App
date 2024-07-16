@@ -1,21 +1,22 @@
-/* Navbar.module.css */
-
+/* Main container */
 .container {
     background: linear-gradient(135deg, #1c1a56, #3b82f6); /* Hysterical blue gradient */
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: white
-  }
-  
+    color: white;
+}
+
+/* Navbar list */
 ul {
     list-style: none;
     margin: 20px 0;
     padding: 0;
     display: flex;
     justify-content: space-around;
-
+    flex-wrap: wrap;
 }
-  
+
+/* Navbar items */
 li {
     color: rgba(255, 255, 255, 0.781);
     font-size: 18px;
@@ -24,42 +25,52 @@ li {
     transition: background-color 0.3s, color 0.3s;
     font-weight: bolder;
 }
-  
+
+/* Navbar items hover state */
 li:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
+
+/* Navbar links */
 a {
     text-decoration: none;
     color: white;
-
 }
 
-.intro{
+/* Intro section */
+.intro {
     margin: 100px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
-img{
+
+/* Intro image */
+img {
     width: 50%;
     height: auto;
     border-radius: 10px;
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.textIntroHeading{
-    max-width: 80%;
+/* Intro heading */
+.textIntroHeading {
+    max-width: 100%;
     font-size: 3rem;
     margin-bottom: 30px;
 }
+
+/* Intro paragraph */
 .textIntro p {
     font-size: 16px;
     line-height: 25px;
-    max-width: 80%;
+    max-width: 100%;
     text-align: justify;
 }
+
+/* Wallet button */
 .walletBtn {
     padding: 10px 20px;
     background: linear-gradient(135deg, #7976d8, #3b82f6);
@@ -71,17 +82,113 @@ img{
     margin: 20px 0;
     font-weight: bolder;
     transition: background 0.3s, transform 0.3s;
-
-
 }
+
+/* Wallet button hover state */
 .walletBtn:hover {
     background: linear-gradient(135deg, #3b82f6, #7976d8);
-    scale: 1.1; 
+    transform: scale(1.1);
 }
-.btnContainer{
+
+/* Button container */
+.btnContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 80%;
+    max-width: 100%;
+}
 
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .textIntroHeading {
+        font-size: 2.5rem;
+    }
+
+    .textIntro p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .intro {
+        margin: 50px 20px;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    .textIntroHeading {
+        font-size: 2rem;
+    }
+
+    .textIntro p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        margin: 30px 10px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .textIntroHeading {
+        font-size: 1.5rem;
+    }
+
+    .textIntro p {
+        font-size: 12px;
+    }
+
+    .walletBtn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 10px 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textIntroHeading {
+        font-size: 1.2rem;
+    }
+
+    .textIntro p {
+        font-size: 12px;
+    }
+
+    .walletBtn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
